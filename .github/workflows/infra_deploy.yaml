@@ -8,6 +8,12 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      run-destroy:
+        description: "Run destroy job"
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   plan:
@@ -77,7 +83,7 @@ jobs:
   destroy:
     name: Terraform destroy
     runs-on: ubuntu-latest
-    if: github.event.inputs.action == 'destroy'
+    if: github.event.inputs.run-destroy == 'true'
 
     steps:
       - name: Checkout code
