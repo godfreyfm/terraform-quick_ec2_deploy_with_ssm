@@ -11,7 +11,7 @@ on:
     inputs:
       run-destroy:
         description: "Run destroy job"
-        required: false
+        required: true
         default: false
         type: boolean
 
