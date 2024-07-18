@@ -6,3 +6,12 @@ availability_zone = "us-east-1a"
 instance_type     = "t2.micro"
 key_name          = "gmaiLABS_key"
 project           = "gmaiLABS"
+
+# Variables for the EBS volume
+
+volume_size           = 10
+volume_type           = "gp2"
+ebs_availability_zone = "us-east-1a"
+device_name           = "/dev/sdh"
+create_ebs_volume     = false
+instance_id           = "value"
