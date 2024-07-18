@@ -13,12 +13,6 @@ variable "ebs_availability_zone" {
   description = "The availability zone where the EBS volume will be created."
   type        = string
 }
-
-variable "instance_id" {
-  description = "The ID of the EC2 instance to attach the EBS volume to."
-  type        = string
-}
-
 variable "device_name" {
   description = "The device name to expose to the EC2 instance."
   type        = string
@@ -33,4 +27,9 @@ variable "create_ebs_volume" {
   description = "Flag to determine whether to create the EBS volume."
   type        = bool
   default     = true
+}
+
+variable "instance_id" {
+  description = "The ID of the unstance"
+  type        = string
 }
